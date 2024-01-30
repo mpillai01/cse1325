@@ -16,13 +16,18 @@ public class Note{
 	}
 @Override
  public String toString() {
+	 String ret = "";
 	 if(pitch == null){
-		 return "";
-	 } else if (octave != 0){
-		 String ret = pitch+octave;
-		 return ret;
+		 ret = "";
+	 } else {
+		 if (octave == 0) {
+			 ret = pitch.toString() + "";
+		 } else {
+		  ret = pitch.toString() + octave;
+		 }  
 		 
 	 } 
+	 return ret;
  
  }
 	
