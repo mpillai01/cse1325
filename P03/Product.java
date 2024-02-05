@@ -27,14 +27,4 @@ Double d1=Double.valueOf(price);
  private int stockNumber;
  private String name; 
  private int price;
-
-public static void main(String[] args) {
- Product p1 = new Product("Cactus Cereus Peruvianus", 4990);
- Product p2 = new Product("'White Princess' Philodendron", 5500);
- Product p3 = new Product("6 inch English Lavender", 2909);
- Product p4 = new Product("'Hayi' Rhaphidophora", 3299);
- System.out.println("" + p1);
- System.out.println("" + p2);
- } 
-
 }
