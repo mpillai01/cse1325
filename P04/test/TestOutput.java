@@ -1,7 +1,9 @@
 package test;
 import store.Customer;
-import store.Product;
+import store.Tool;
 import store.Item;
+import store.Order;
+
 
 public class TestOutput {
     public static void main(String[] args) {
@@ -14,10 +16,10 @@ public class TestOutput {
             System.out.println("Famous customers include\n  "
                              + c1 + "\n  " + c2 + "\n  "+ c3 + "\n  " + c4);
 
-            Product p1 = new Product("Cactus Cereus Peruvianus", 4990);
-            Product p2 = new Product("'White Princess' Philodendron", 5500);
-            Product p3 = new Product("6 inch English Lavender", 2909);
-            Product p4 = new Product("'Hayi' Rhaphidophora", 3299);
+            Tool p1 = new Tool("Cactus Cereus Peruvianus", 4990);
+            Tool p2 = new Tool("'White Princess' Philodendron", 5500);
+            Tool p3 = new Tool("6 inch English Lavender", 2909);
+            Tool p4 = new Tool("'Hayi' Rhaphidophora", 3299);
 
             System.out.println("Our best plants include:\n  "
                              + p1 + "\n  " + p2 + "\n  "+ p3 + "\n  " + p4);
@@ -29,8 +31,16 @@ public class TestOutput {
 
             System.out.println("And my order will include:\n  "
                              + i1 + "\n  " + i2 + "\n  "+ i3 + "\n  " + i4);
-        } catch(Exception e) {
+        Order o1 = new Order(c1);
+		o1.addItem(i1);
+		o1.addItem(i2);
+		o1.addItem(i3);
+		o1.addItem(i4);
+		System.out.println("And my order will include:\n  "
+                             + o1 + "\n  " );
+		} catch(Exception e) {
             System.err.println("Failed to create and print objects: \n" + e);
         }
+		
     }
 }
