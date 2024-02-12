@@ -1,18 +1,19 @@
 package test;
-import store.Product;
-
+import store.Tool;
+import store.Plant;
+import store.Exposure;
 
 public class TestProduct {
     public static void main(String[] args) {
 		int errors =0;
         try {            
-            Product p1 = new Product("Cactus Cereus Peruvianus", 4990);
+            Tool p1 = new Tool("Cactus Cereus Peruvianus", 4990);
 			System.out.println("First Stock number is " +p1.getStockNumber());
             if (p1.getStockNumber() != 0){ 
             System.err.println("FAIL: 0 expected but got " + p1.getStockNumber());
 			errors++;
 			}
-			Product p2 = new Product("'White Princess' Philodendron", 5500);
+			Tool p2 = new Tool("'White Princess' Philodendron", 5500);
 			System.out.println("Second Stock number is " +p2.getStockNumber());
 			 if (p2.getStockNumber() != 1){ 
             System.err.println("FAIL: 1 expected but got " + p2.getStockNumber());
@@ -23,14 +24,16 @@ public class TestProduct {
             System.err.println("FAIL: 4990 expected but got " + p1.getPrice());
 			errors++;
 			}
-            Product p3 = new Product("6 inch English Lavender", 2909);
-            Product p4 = new Product("'Hayi' Rhaphidophora", 3299);
+            Tool p3 = new Tool("6 inch English Lavender", 2909);
+            Tool p4 = new Tool("'Hayi' Rhaphidophora", 3299);
 
             System.out.println("Products are:\n  "
                              + p1 + "\n  " + p2 + "\n  "+ p3 + "\n  " + p4);
+		 Plant p6= new Plant("Cactus Cereus Peruvianus", 4990,Exposure.SUN);
+		 System.out.println(p6);
 		 try {
 			 System.out.println("Product with negative price -1 \n");
-           Product p5 = new Product("Cactus Cereus Peruvianus", -1); 
+           Tool p5 = new Tool("Cactus Cereus Peruvianus", -1); 
         } catch(Exception e) {			
             System.err.println(e.getMessage());
             System.exit(-1);
