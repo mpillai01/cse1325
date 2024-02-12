@@ -1,6 +1,6 @@
 package store;
 import java.text.DecimalFormat;
-public class Product {
+public abstract class Product {
  
  public Product(String name, int price) {
  if(price<0) {
