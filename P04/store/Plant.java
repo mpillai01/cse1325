@@ -5,4 +5,7 @@ public class Plant extends Product{
 		super("Plant: " + species,price);
 		this.exposure=exposure;
 }
+public Exposure getExposure(){
+	return exposure;
+}
 }
