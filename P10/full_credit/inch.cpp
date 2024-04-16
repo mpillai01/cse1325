@@ -15,7 +15,10 @@ std::ostream& operator<<(std::ostream& os, const Inch& inch) {
 }
 
 std::istream& operator>>(std::istream& is, Inch& inch) {
-	is.clear();
+	//std::cout << inch._whole;
+	//std::cout << inch._numerator;
+	//std::cout << inch._denominator;
+	
     is >> inch._whole;
     is >> inch._numerator;
     is >> inch._denominator; 
@@ -41,7 +44,7 @@ void Inch::validate(){
 		throw std::invalid_argument{"Denominator must be 2, 4, 8, 16, 32, or 64"}; 
 	}
 	
-	while(_denominator < _numerator)
+	while(_denominator <= _numerator)
 	{
 		_numerator = _numerator - _denominator;
 		_whole++;
